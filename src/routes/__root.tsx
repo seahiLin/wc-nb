@@ -6,7 +6,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { title: 'Sprig App' },
+      { title: 'Event Horizon' },
     ],
     links: [{ rel: 'stylesheet', href: appCss }],
   }),
@@ -19,7 +19,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className="min-h-screen bg-stone-50 text-stone-900 antialiased">
+      <body className="min-h-screen bg-[#030305] text-stone-200 antialiased">
         {children}
         <Scripts />
       </body>
