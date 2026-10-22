@@ -17,8 +17,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+      # No lockfile in this repo: install straight from package.json, so a stale
+      # lockfile can never break the deploy.
+      - run: npm install --no-audit --no-fund
       - run: npm run build
       - if: github.ref == 'refs/heads/main'
         run: npx wrangler deploy

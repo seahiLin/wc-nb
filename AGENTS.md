@@ -6,3 +6,4 @@ A TanStack Start app that runs as a Cloudflare Worker (`@cloudflare/vite-plugin`
 - Styling is Tailwind CSS v4 (`src/styles.css`).
 - `src/server.ts` wraps the TanStack Start handler and sets the CSP `frame-ancestors` header so Sprig Studio can embed previews. Keep it.
 - Dependencies are managed with npm. If you add one, also add it to `package.json`.
+- There is no `package-lock.json` on purpose: deploys install from `package.json` only, so keep versions in `package.json` accurate.
