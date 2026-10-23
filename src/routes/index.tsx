@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { Link, createFileRoute } from '@tanstack/react-router'
 import { BlackHoleScene } from '@/components/BlackHoleScene'
 
 export const Route = createFileRoute('/')({
@@ -32,6 +32,15 @@ function Home() {
         <span className="bh-pulse inline-block h-1.5 w-1.5 rounded-full bg-white/70" />
         live
       </div>
+
+      <Link
+        to="/pelican"
+        className="group absolute top-4 left-4 flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-2 text-[0.58rem] tracking-[0.28em] text-white/45 uppercase backdrop-blur-sm transition hover:border-white/25 hover:bg-white/10 hover:text-white/85"
+      >
+        <span className="text-[0.7rem] leading-none">🐦</span>
+        Pelican Ride
+        <span className="transition group-hover:translate-x-0.5">→</span>
+      </Link>
     </main>
   )
 }
